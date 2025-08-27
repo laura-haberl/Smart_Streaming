@@ -1,6 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personalized Movie Recommendations through Chatbot Interaction
 
-## Getting Started
+This project was developed as part of my Master's thesis.  
+It is a **Next.js web application** that integrates a **CopilotKit chatbot**.  
+The chatbot guides users through preference selection (e.g. genres, platforms) and provides **personalized movie recommendations** based on stored preferences and dynamic inputs.
+
+## ✨ Features
+- Chatbot interaction with prompt-engineered conversation flow
+- Personalized movie recommendations from TMDb API
+- User profile management for editing and saving preferences
+- Dynamic UI adjustments based on user input
+
+## 🖼️ Screenshots
+
+**Start page**  
+![Start Page](docs/Startseite.png)
+
+**Profile page**  
+![Profile Page](docs/Profilseite.png)
+
+
+
+## 🛠️ Tech Stack
+- [Next.js](https://nextjs.org/)
+- [CopilotKit](https://copilotkit.ai/)
+- [MongoDB](https://www.mongodb.com/)
+- [TMDb API](https://www.themoviedb.org/documentation/api)
+- [OpenAI GPT-4o](https://openai.com)
+
+## 🚀 Getting Started
 
 First, run the development server:
 
