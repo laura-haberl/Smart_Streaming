@@ -1,0 +1,380 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --copilot-kit-primary-color: #487cbf;
+
+    --primary: #122439;
+    --secondary: #487cbf;
+    --light-gray: #75859b;
+    --light-blue: #a6b4c8;
+    --text1: #e0e0e0;
+    --text2: #b0b0b0;
+    --navbar: #070c13;
+    --background: #0a1420;
+
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.copilotKitDevConsole {
+  @apply hidden !important;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text1);
+}
+
+.navbar-styling {
+  background-color: var(--navbar);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+button {
+  background-color: var(--secondary);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.settings-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.settings-nav {
+  width: 200px;
+  position: sticky;
+  top: 80px;
+  margin-left: 30px;
+}
+
+.settings-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settings-nav li {
+  margin-bottom: 10px;
+}
+
+.settings-nav a {
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  background-color: #374151;
+  color: white;
+  border-radius: 5px;
+}
+
+.settings-nav a:hover {
+  background-color: #4b5563;
+}
+
+.settings-content {
+  flex-grow: 1;
+  margin-left: 20px; /* Abstand zur Navigation */
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+.settings-content section:nth-last-of-type(-n+1) {
+  padding-bottom: 60vh;
+}
+
+
+/* Smooth Scrolling für weiches Springen */
+html {
+  scroll-behavior: smooth;
+}
+
+.profile-container {
+  background-color: var(--light-gray);
+  border-width: 3px;
+  border-color: var(--light-blue);
+  border-radius: 30px;
+  max-width: 620px;
+  color: var(--background);
+  margin: 20px;
+}
+
+.profile-footer {
+  display: flex;
+  justify-content: flex-end; /* Verschiebt den Button nach rechts */
+  margin-top: 20px;
+}
+
+.profile-footer .saveButton {
+  margin: 20px;
+  margin-top: 30px;
+  padding: 10px 32px;
+  background-color: var(--background);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.profile-footer .active-button {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.profile-footer .disabled-button {
+  background-color: #444; /* Grau für deaktivierten Zustand */
+  color: #bbb;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+.profile-container .profile-header {
+  display: flex;
+  align-items: center;
+  background-color: var(--background);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 30px 30px 0 0;
+  margin-bottom: 20px;
+}
+
+.profile-container .profile-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.profile-container .profile-title {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 450;
+}
+
+.heading {
+  font-size: 28px;
+}
+
+.home-container {
+  width: 70%;
+  margin: 3rem;
+}
+
+
+
+
+
+
+.movie-card {
+  background-color: var(--primary);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  flex-shrink: 0;
+
+}
+
+.movie-card-content {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.poster {
+  width: 160px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 15px;
+  padding: 10px;
+
+}
+
+.movie-info {
+  flex: 1;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.movie-title {
+  font-size: 18px;
+  margin: 0;
+  color: #fff;
+}
+
+
+.movie-genres {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.details-button:hover {
+  text-decoration: underline;
+}
+
+.details-button {
+  display: inline-block;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  background-color: var(--secondary);
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: 20px;
+
+}
+
+.star-rating {
+  display: flex;
+  margin-top: 4px;
+  gap: 0.25rem; /* Abstand zwischen den Sternen */
+}
+
+.star-rating svg {
+  font-size: 14px; /* Größe der Sterne */
+}
+
+.unrated {
+  font-size: 12px;
+}
+
+
+
+
+.movie-carousel {
+  padding-top: 3rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  padding-top: 15px;
+}
+
+.carousel-container {
+  display: flex;
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+}
+
+.carousel-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.carousel-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+.carousel-title {
+  font-size: 22px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--light-gray);
+  width: 450px;
+  padding: 20px;
+  border-radius: 22px;
+  border: 2px solid var(--light-blue);
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  font-size: x-large;
+  font-weight: bold;
+  color: #000;
+}
+
+.modal-content p {
+  color: #000;
+}
+
+.modal-content .warning {
+  font-size: xxx-large;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.cancel-button, .confirm-button {
+  padding: 10px 32px;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.text-highlight {
+  font-weight: 800;
+}
+
+.home-space {
+  margin-bottom: 100px;
+}
